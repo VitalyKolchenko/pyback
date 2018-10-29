@@ -3,7 +3,7 @@ from sanic.response import json
 
 app = Sanic()
 
-@app.route("/name")
+@app.route("/<name>")
 async def test(request,name):
     return json({"hello": name})
 
